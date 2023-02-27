@@ -1,0 +1,137 @@
+<script>
+
+    /*Storing values
+    var - whole program
+    let - used only within the scope where is declared
+    const - constant value that should not be changed
+    */
+
+    /*Immutablity of strings, this will not change first letter
+    var myStr = "Jello!";
+    myStr[0] = "H";
+    console.log(myStr[0]);
+    */
+
+    /*This will change first number
+    var myArray = [-4, 20, 30];
+    myArray[0] = 10;
+    console.log(myArray);
+    */
+
+    /*Nested arrays
+    var myArray = [["the space", 45], ["something", 10, 100.5]];
+    console.log(myArray);
+    console.log("Length: " + myArray.length)
+    */
+
+    /*Arrays inside arrays
+    var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]];
+    console.log(myArray);
+    var myData = myArray[3][1]; //equals 13
+    console.log(myData); 
+    var myData2 = myArray[3][0]; //equals [10, 11, 12]
+    console.log(myData2);
+    */
+
+    /*Equality operators
+    function compareEquality(a, b) {
+        if (a == b) {
+            return "Equal";
+        }
+        return "Not equal";
+    }
+
+    console.log(compareEquality(10, '10')); //equal because converting number to string
+
+    function compareStrictEquality(a, b) {
+        if (a === b) {
+            return "Equal";
+        }
+        return "Not equal";
+    }
+
+    console.log(compareStrictEquality(10, '10')); // not equal because not converting type of data
+    */
+
+    /*Add properties to object
+    var myDog = {
+        "name": "Rex",
+        "legs": 4,
+        "tails": 1,
+    };
+
+    myDog.bark = "bow-wow"; // adding new property
+    myDog["eyes"] = 2; // adding new propery with brackets
+
+    console.log(myDog);
+    */
+
+    /*Random whole number between 0 and 9
+    function randomWholeNumber() {
+        return Math.floor(Math.random() * 10);
+    }
+
+    console.log(randomWholeNumber());
+    //Math.random() function gives number between 0 and 1 but it can't be 1
+    */
+
+    /*Reassign array
+    const s = [5, 7, 2];
+    function edit() {
+        "use strict";
+
+        //This will not reassign array because it is read only
+        // s = [2, 5, 7];
+        s[0] = 2;
+        s[1] = 5;
+        s[2] = 7;
+    }
+
+    edit();
+    console.log(s);
+    */
+
+    //If you don't want to change any of items in object use Object.freeze();
+
+    /*Arrow functions
+    let myConcat = (arr1, arr2) => arr1.concat(arr2);
+    console.log(myConcat([1,2], [3, 4, 5]));
+    */
+
+    /*Destructuring
+    const avgTemperatures = {
+        today: 15.6,
+        tomorrow: 11.2
+    };
+
+    function getTempTomorrow(avgTemperatures) {
+        //Destructuring
+        const {tomorrow: tempOfTomorrow} = avgTemperatures;
+        return tempOfTomorrow;
+    }
+
+    console.log(getTempTomorrow(avgTemperatures));
+    */
+
+    /*
+    const createPerson = (name, age, gender) => {
+
+        return {
+        name: name,
+        age: age,
+        gender: gender
+        };
+    };
+
+    console.log(createPerson("Zodiac Hasbro", 56, "male"))
+
+    //This code same as
+
+    const createPerson2 = (name, age, gender) => (
+        {name, age, gender}
+    )
+
+    console.log(createPerson2("Hasbro", 45, "male"))
+    */ 
+
+</script>
